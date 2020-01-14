@@ -8,8 +8,17 @@ import sys
 from math import exp, expm1
 import math
 from decimal import *
+import argparse
 # getcontext().prec = 2
 
+## help
+parser = argparse.ArgumentParser()
+parser.add_argument("val1", help="Width (cm)",type=float)
+parser.add_argument("val2", help="Height (cm)",type=float)
+parser.add_argument('--version', action='version', version='Version 0.1')
+print parser.parse_args()
+
+## run the script
 size = float(sys.argv[1])
 dist = float(sys.argv[2])
 
